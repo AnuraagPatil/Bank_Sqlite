@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.anuraag.bank_sqlite.Home">
+
+
+    <TableLayout
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:stretchColumns="1,2,3"
+        >
+
+        <TableRow>
+
+            <TextView
+                android:layout_column="1"
+                android:hint="Account no"
+
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_column="2"
+
+                android:hint="Username"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_column="3"
+                android:text="Balance"
+
+                android:textSize="20dp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+
+                android:id="@+id/ac_no"
+                android:layout_column="1"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/usr"
+                android:layout_column="2"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/bal"
+                android:layout_column="3"
+                android:textSize="20dp" />
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tab"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:onClick="getDetails"
+            android:text="get details" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:onClick="addBalance"
+            android:text="add balance" />
+
+    </LinearLayout>
+
+</RelativeLayout>
